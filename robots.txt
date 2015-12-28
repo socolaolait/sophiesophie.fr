@@ -1,0 +1,14 @@
+# www.robotstxt.org/
+# http://code.google.com/web/controlcrawlindex/
+
+User-agent: *
+Disallow: liste-agences-communication-web-lyon-firebase.html
+Disallow: cv-sophie-allemandet-developpeuse-integratrice-web.pdf
+Disallow: liste-agences-lyon-sophie.pdf
+Disallow: liste-agences-communication-web-lyon.pdf
+Disallow: liste-agences-communication-web-lyon.html
+Disallow: /img/
+Disallow: /sass/
+Disallow: /lab/
+Disallow: /photos/
+Disallow: /test/

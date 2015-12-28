@@ -1,0 +1,42 @@
+@import "reset/reset";
+@import "utils/helpers";
+@import "utils/breakpoint";
+
+@import "theme/colors";
+
+/* global styles */
+a,
+a:focus,
+a:active,
+a:visited {
+  color: $text-base;
+  text-decoration: none
+}
+
+html,
+body {
+  margin: 0;
+  padding: 0;
+  height: 100%;
+}
+
+body {
+  color: $theme-primary;
+  font: 300 62.5%/1.4 Lato, sans-serif;
+  text-align: center;
+}
+
+::-moz-selection { color: #fff;  background: $theme-primary; }
+::selection      { color: #fff;  background: $theme-primary; }
+
+.wrapper {
+  position: relative;
+  width: 100%;
+  min-width: 320px;
+  min-height: 100%;
+  background: url(../images/bg.jpg) no-repeat $text-base-reversed;
+  background-size: cover;
+}
+
+@import "parts/header";
+@import "parts/main";

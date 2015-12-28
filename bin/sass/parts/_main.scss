@@ -1,0 +1,109 @@
+/*
+ *  _main.scss (28/12/15)
+ *	main part
+ *
+ */
+
+.main {
+  padding: 0 60px 60px;
+
+  @include breakpoint(small) {
+    padding: 0 30px 30px;
+    font-size: 1em;
+  }
+
+  p, ul {
+    margin-bottom: 10px;
+    font-size: 1.8em;
+
+    > span {
+      font: 400 2em 'Dancing Script', serif;
+    }
+  }
+
+  p {
+    margin: 0 auto 10px;
+    max-width: 520px;
+
+    &.last {
+      margin-top: 60px;
+      max-width: 420px;
+
+      @include breakpoint(small) {
+        margin-top: 30px;
+      }
+    }
+  }
+
+  ul {
+    margin-bottom: 20px;
+    width: 580px;
+
+    @include breakpoint(small) {
+      width: auto;
+    }
+  }
+
+  li {
+    float: left;
+    width: 290px;
+
+    @include breakpoint(small) {
+      float: none;
+      width: auto;
+    }
+
+    a,
+    a:visited {
+      color: $theme-primary;
+    }
+
+    a:hover,
+    a:active,
+    a:visited:hover,
+    a:visited:active {
+      color: $theme-primary;
+      transition: color 0.3s
+    }
+  }
+
+  a,
+  a:visited {
+    position: relative;
+    display: inline-block;
+    padding: 0 2px;
+    border-bottom: 1px solid;
+    color: $theme-primary;
+    text-decoration: none;
+
+    span {
+      position: relative;
+      z-index: 1;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      left: 0;
+      top: 0;
+      z-index: 0;
+      height: 100%;
+      width: 0;
+      background: $theme-tertiary;
+    }
+
+    &:hover,
+    &:active {
+      color: $theme-primary;
+
+      &::before {
+        width: 100%;
+        transition: width 0.3s;
+      }
+    }
+  }
+
+  .about {
+    margin-bottom: 30px
+  }
+}
