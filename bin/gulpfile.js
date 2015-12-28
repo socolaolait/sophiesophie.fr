@@ -10,12 +10,12 @@ var sass = require('gulp-sass');
 
 var path = {
   src : {
-    images : 'images/**/*',
+    images : 'img/**/*',
     sass : 'sass/**/*.scss',
     scripts : 'scripts/**/*.js'
   },
   dest : {
-    images : '../images',
+    images : '../img',
     css : '../css',
     js : '../js'
   }
