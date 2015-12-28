@@ -80,7 +80,7 @@ gulp.task('scripts:prod', function(){
         console.log(error.message);
         this.emit('end');
     }}))
-    .pipe(concat('main.js'))
+    .pipe(concat('functions.js'))
     .pipe(gulp.dest(path.dest.js))
     .pipe(uglify())
     .pipe(gulp.dest(path.dest.js))

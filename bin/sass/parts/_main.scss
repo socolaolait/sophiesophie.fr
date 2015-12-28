@@ -72,24 +72,37 @@
     position: relative;
     display: inline-block;
     padding: 0 2px;
-    border-bottom: 1px solid;
     color: $theme-primary;
     text-decoration: none;
 
-    span {
+    /*span {
       position: relative;
       z-index: 1;
+    }*/
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      bottom: 0;
     }
 
     &::before {
-      content: "";
-      position: absolute;
       left: 0;
-      top: 0;
-      z-index: 0;
-      height: 100%;
+      z-index: 1;
+      height: 3px;
       width: 0;
-      background: $theme-tertiary;
+      background: $theme-secondary;
+      transition: width 0.2s;
+    }
+
+    &::after {
+      right: 0;
+      z-index: 0;
+      height: 1px;
+      width: 100%;
+      background: $theme-primary;
+      transition: width 0.2s 0.2s;
     }
 
     &:hover,
@@ -98,7 +111,12 @@
 
       &::before {
         width: 100%;
-        transition: width 0.3s;
+        transition: width 0.2s 0.2s;
+      }
+
+      &::after {
+        width: 0;
+        transition: width 0.2s;
       }
     }
   }
