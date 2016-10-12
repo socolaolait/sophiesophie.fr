@@ -50,12 +50,18 @@ gulp.task('images', function() {
     .pipe(gulp.dest(params.dist.images));
 });
 
-// Compile sass files
+// Compile sass files and autoprefixer
 gulp.task('sass', function() {
   return gulp.src(params.src.sass)
     .pipe(plugins.sass().on('error', plugins.sass.logError))
     .pipe(gulp.dest(params.dist.css))
-    .pipe(plugins.autoprefixer('last 2 versions', '> 5 %'))
+    .pipe(plugins.autoprefixer({
+        browsers: [
+          'last 2 versions',
+          '> 5%'
+        ]
+      })
+    )
     .pipe(gulp.dest(params.dist.css));
 });
 
@@ -68,9 +74,9 @@ gulp.task('cssclean', function() {
       })
     )
     .pipe(
-      plugins.cssnano(
-        {zindex: false}
-      )
+      plugins.cssnano({
+        zindex: false
+      })
     )
     .pipe(
       plugins.rename({
@@ -78,9 +84,7 @@ gulp.task('cssclean', function() {
       })
     )
     .pipe(gulp.dest(params.dist.css))
-    .pipe(
-      plugins.livereload()
-    );
+    .pipe(plugins.livereload());
 });
 
 // Generate styles (sass + cssclean)
