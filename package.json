@@ -1,0 +1,29 @@
+{
+  "name": "sophiesophie.fr",
+  "version": "3.0.0",
+  "description": "",
+  "main": "gulpfile.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sophiealdt/sophiesophie.fr.git"
+  },
+  "author": "Sophie Allemandet",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/sophiealdt/sophiesophie.fr/issues"
+  },
+  "homepage": "https://github.com/sophiealdt/sophiesophie.fr#readme",
+  "devDependencies": {
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-combine-mq": "^0.4.0",
+    "gulp-cssnano": "^2.1.2",
+    "gulp-file-include": "^1.0.0",
+    "gulp-imagemin": "^3.0.3",
+    "gulp-livereload": "^3.8.1",
+    "gulp-load-plugins": "^1.3.0",
+    "gulp-rename": "^1.2.2",
+    "gulp-sass": "^2.3.2",
+    "run-sequence": "^1.2.2"
+  }
+}

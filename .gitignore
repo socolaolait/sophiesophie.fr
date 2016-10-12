@@ -18,3 +18,8 @@ liste-agences-communication-web-lyon.php
 .idea
 .sass-cache
 node_modules
+
+# DIST #
+dist/img/*
+dist/*.html
+dist/css/*
