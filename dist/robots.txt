@@ -3,7 +3,5 @@
 
 User-agent: *
 Disallow: /img/
-Disallow: /sass/
-Disallow: /lab/
 Disallow: /photos/
 Disallow: /test/

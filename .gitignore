@@ -9,11 +9,6 @@ Icon?
 ehthumbs.db
 Thumbs.db
 
-# FILES #
-cv-sophie-allemandet-front-end-developer-fr.pdf
-cv-sophie-allemandet-front-end-developer.pdf
-liste-agences-communication-web-lyon.php
-
 # FOLDERS #
 .idea
 .sass-cache
@@ -23,3 +18,5 @@ node_modules
 dist/img/*
 dist/*.html
 dist/css/*
+dist/cv-sophie-allemandet-front-end-developer.pdf
+dist/liste-agences-communication-web-lyon.php

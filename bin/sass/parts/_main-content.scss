@@ -1,69 +1,30 @@
 /*
- *  _main.scss (28/12/15)
+ *  _main-content.scss (20/11/16)
  *	main part
  *
  */
 
-.main {
-  padding: 0 60px 60px;
+.main-content {
 
   @include breakpoint(small) {
-    padding: 0 30px 30px;
     font-size: 1em;
   }
 
-  p, ul {
-    margin-bottom: 10px;
-    font-size: 1.8em;
-
-    > span {
-      font: 400 2em 'Dancing Script', serif;
-    }
+  &--title {
+    font: 400 3.6em 'Dancing Script', serif;
   }
 
-  p {
+  &--desc {
     margin: 0 auto 10px;
     max-width: 520px;
+    font-size: 1.8em;
 
-    &.last {
+    + .main-content--title {
       margin-top: 60px;
-      max-width: 420px;
 
       @include breakpoint(small) {
         margin-top: 30px;
       }
-    }
-  }
-
-  ul {
-    margin-bottom: 20px;
-    width: 580px;
-
-    @include breakpoint(small) {
-      width: auto;
-    }
-  }
-
-  li {
-    float: left;
-    width: 290px;
-
-    @include breakpoint(small) {
-      float: none;
-      width: auto;
-    }
-
-    a,
-    a:visited {
-      color: $theme-primary;
-    }
-
-    a:hover,
-    a:active,
-    a:visited:hover,
-    a:visited:active {
-      color: $theme-primary;
-      transition: color 0.3s
     }
   }
 
@@ -74,11 +35,7 @@
     padding: 0 2px;
     color: $theme-primary;
     text-decoration: none;
-
-    /*span {
-      position: relative;
-      z-index: 1;
-    }*/
+    cursor: pointer;
 
     &::before,
     &::after {
@@ -119,9 +76,5 @@
         transition: width 0.2s;
       }
     }
-  }
-
-  .about {
-    margin-bottom: 30px
   }
 }

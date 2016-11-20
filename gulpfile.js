@@ -15,7 +15,7 @@ var params = {
     files: './bin/html/',
     sass: './bin/sass/**/*.scss',
     sassDir: './bin/sass/',
-    images: './bin/img/'
+    images: './bin/images/'
   },
   dist : {
     files: './dist/',
@@ -97,4 +97,9 @@ gulp.task('watch', function(){
   gulp.watch('**/*.scss', {cwd: params.src.sassDir}, ['styles']);
   gulp.watch('**/*', {cwd: params.src.images}, ['images']);
   gulp.watch('**/*.html', {cwd: params.src.files}, ['files']);
+});
+
+// Default task
+gulp.task('default', function(callback){
+    runSequence('files', 'images', 'styles', callback);
 });

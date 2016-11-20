@@ -1,0 +1,40 @@
+/*
+ *  _community-menu.scss (20/11/16)
+ *
+ */
+
+.community-menu {
+  margin-top: 60px;
+
+  @include breakpoint(small) {
+    margin-top: 30px;
+  }
+
+  li {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 0 4px;
+
+    a {
+      display: block;
+      padding: 4px;
+      opacity: 0.85;
+      transition: opacity 0.2s;
+
+      &:hover,
+      &:active {
+        opacity: 1;
+      }
+
+      img {
+        display: block;
+        max-width: 20px;
+        height: auto;
+      }
+
+      &.yelp img {
+        max-width: 18px;
+      }
+    }
+  }
+}

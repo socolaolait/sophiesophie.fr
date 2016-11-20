@@ -35,9 +35,15 @@ body {
 
 .wrapper {
   position: relative;
+  padding: 60px;
+  box-sizing: border-box;
   width: 100%;
   min-width: 320px;
   min-height: 100%;
+
+  @include breakpoint(small) {
+    padding: 30px;
+  }
 
   &::before {
     content: "";
@@ -47,10 +53,11 @@ body {
     bottom: 0;
     left: 0;
     z-index: -1;
-    background: url(../img/bg.jpg) no-repeat $text-base-reversed;
+    background: url(../img/site-bg.jpg) no-repeat $text-base-reversed;
     background-size: cover;
   }
 }
 
-@import "parts/header";
-@import "parts/main";
+@import "parts/main-title";
+@import "parts/main-content";
+@import "parts/community-menu";
