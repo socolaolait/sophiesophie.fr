@@ -5,10 +5,7 @@
  */
 
 .main-content {
-
-  @include breakpoint(small) {
-    font-size: 1em;
-  }
+  font-size: 1em;
 
   &--title {
     font: 400 3.6em 'Dancing Script', serif;
@@ -16,14 +13,18 @@
 
   &--desc {
     margin: 0 auto 10px;
-    max-width: 520px;
-    font-size: 1.8em;
+    max-width: 600px;
+    font-size: 1.6em;
+
+    @include mq(medium) {
+      font-size: 1.8em;
+    }
 
     + .main-content--title {
-      margin-top: 60px;
+      margin-top: 30px;
 
-      @include breakpoint(small) {
-        margin-top: 30px;
+      @include mq(medium) {
+        margin-top: 60px;
       }
     }
   }

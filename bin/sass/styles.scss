@@ -1,12 +1,9 @@
 @import "_reset/reset";
-@import "_core/breakpoint";
+@import "_core/media-query";
+@import "_params/layout";
+@import "_params/colors";
 
-$text-base: #444;
-$text-base-reversed: #fafafa;
 
-$theme-primary: #FE5;
-$theme-secondary: #1CF;
-$theme-tertiary: #C06;
 
 /* global styles */
 a,
@@ -30,19 +27,30 @@ body {
   text-align: center;
 }
 
+.visually-hidden {
+  position: absolute !important;
+  height: 1px; width: 1px;
+  overflow: hidden;
+  clip: rect(1px 1px 1px 1px); /* IE6, IE7 */
+  clip: rect(1px, 1px, 1px, 1px);
+}
+
 ::-moz-selection { color: #fff;  background: $theme-secondary; }
 ::selection      { color: #fff;  background: $theme-secondary; }
 
 .wrapper {
   position: relative;
-  padding: 60px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 30px;
   box-sizing: border-box;
   width: 100%;
-  min-width: 320px;
+  min-width: $site-width-min;
   min-height: 100%;
 
-  @include breakpoint(small) {
-    padding: 30px;
+  @include mq(medium) {
+    padding: 60px;
   }
 
   &::before {

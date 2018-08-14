@@ -1,0 +1,18 @@
+/*
+  Media query
+  Mobile first (min-width)
+ */
+
+@mixin mq($device) {
+
+  @if map-has-key($breakpoints, $device) {
+
+    @media (min-width: map-get($breakpoints, $device)) {
+      @content;
+    }
+
+  } @else {
+    @content;
+  }
+
+}

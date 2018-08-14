@@ -5,24 +5,21 @@
  */
 
 .main-title {
-  margin-bottom: 60px;
-  font-size: 1em;
+  margin-bottom: 30px;
+  font-size: 0.7em;
 
-  @include breakpoint(small) {
-    margin-bottom: 30px;
-    font-size: 0.7em;
+  @include mq(medium) {
+    margin-bottom: 60px;
+    font-size: 1em;
   }
 
   &--name {
-    font: 400 5.1em 'Dancing Script', serif;
+    font: 400 5.2em 'Dancing Script', serif;
   }
 
   &--function {
-    font: 900 6em/0.9 Lato, serif;
+    font: 900 3.64em/.9 Lato,serif;
     text-transform: uppercase;
-
-    .front {
-      color: $theme-secondary;
-    }
+    color: $theme-secondary;
   }
 }
